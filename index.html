@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CyberSafe</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="spotting-phishing.html">Spotting Phishing</a>
+            <a href="suspicious-links.html">Suspicious Links</a>
+            <a href="what-to-do.html">What to Do</a>
+            <a href="index.html#practice">Practice</a>
+            <a href="index.html#quiz">Quiz</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div>
+                <p class="tag">CYBERSECURITY AWARENESS</p>
+                <h1>Think Before<br><span>You Click.</span></h1>
+                <p class="hero-text">
+                    Learn how to recognize phishing emails, identify suspicious
+                    messages, and protect your online accounts.
+                </p>
+                <a href="spotting-phishing.html" class="button">Start Learning →</a>
+            </div>
+        </section>
+
+        <section id="videos" class="section videos-section">
+            <p class="tag">VIDEOS</p>
+            <h2>Choose a lesson</h2>
+            <p class="description">
+                Each topic is its own page so it feels like a separate section of the website.
+            </p>
+
+            <div class="video-stack">
+                <a class="lesson-link" href="spotting-phishing.html">
+                    <div class="video-card full-width">
+                        <h3>Spotting Phishing</h3>
+                        <p>Learn to recognize fake emails, urgent scam messages, and suspicious requests.</p>
+                    </div>
+                </a>
+
+                <a class="lesson-link" href="suspicious-links.html">
+                    <div class="video-card full-width">
+                        <h3>Suspicious Links</h3>
+                        <p>See how to spot fake URLs and avoid clicking dangerous links.</p>
+                    </div>
+                </a>
+
+                <a class="lesson-link" href="what-to-do.html">
+                    <div class="video-card full-width">
+                        <h3>What to Do</h3>
+                        <p>Know the right actions to take when you see a risky message or scam attempt.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="practice" class="section practice">
+            <p class="tag">PRACTICE</p>
+            <h2>Can You Spot the Phish?</h2>
+            <p class="description">Read the message below and decide what you would do.</p>
+            <div class="email">
+                <div class="email-top">
+                    <strong>📧 Student Mail</strong>
+                    <span>Today, 8:42 AM</span>
+                </div>
+                <div class="email-info">
+                    <p><strong>From:</strong> student123@school.edu</p>
+                    <p><strong>Subject:</strong> Amazing Job Opportunity!</p>
+                </div>
+                <hr>
+                <p>Congratulations! You have been selected for an amazing job opportunity.</p>
+                <p>Click the link below immediately to verify your information and accept this opportunity.</p>
+                <button class="fake-link">VERIFY YOUR INFORMATION</button>
+            </div>
+            <div class="choices">
+                <button onclick="checkAnswer('click')">🖱️ Click the link</button>
+                <button onclick="checkAnswer('report')">🚩 Report it</button>
+                <button onclick="checkAnswer('reply')">💬 Reply to the sender</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+
+        <section id="quiz" class="section">
+            <p class="tag">QUIZ</p>
+            <h2>Test Your Knowledge</h2>
+            <div class="quiz-card">
+                <h3>Question 1</h3>
+                <p>You receive an unexpected email asking you to click a link and provide your password. What should you do?</p>
+                <button onclick="quizAnswer(false)">A. Click the link quickly</button>
+                <button onclick="quizAnswer(true)">B. Don't click and report the message</button>
+                <button onclick="quizAnswer(false)">C. Reply with your password</button>
+                <div id="quiz-feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🛡️ CyberSafe — Think Before You Click.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
