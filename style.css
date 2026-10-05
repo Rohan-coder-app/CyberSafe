@@ -349,3 +349,16 @@ footer {
         height: 240px;
     }
 }
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Optional styling for secondary buttons if you want a neutral outline look */
+.button.secondary {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: inherit;
+}
