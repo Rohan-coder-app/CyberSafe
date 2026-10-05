@@ -96,6 +96,13 @@ h1 span {
     font-weight: bold;
 }
 
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
 .section {
     padding: 100px 12%;
     background: #0a1727;
@@ -347,6 +354,10 @@ footer {
 
     .video-card video {
         height: 240px;
+    }
+
+    .lesson-navigation {
+        flex-wrap: wrap;
     }
 }
 .button-group {
