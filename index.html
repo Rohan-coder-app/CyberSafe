@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
     <nav>
         <div class="logo">CyberSafe</div>
         <div class="nav-links">
@@ -21,41 +21,83 @@
 
     <main>
         <section id="home" class="hero">
-            <div>
-                <p class="tag">CYBERSECURITY AWARENESS</p>
-                <h1>Think Before<br><span>You Click.</span></h1>
+            <div class="hero-copy">
+                <p class="tag">A little more confidence online</p>
+                <h1>Not sure about that message? <span>Pause a second.</span></h1>
                 <p class="hero-text">
-                    Learn how to recognize phishing emails, identify suspicious
-                    messages, and protect your online accounts.
+                    Scam messages are made to rush you. A few small checks can help
+                    you spot the warning signs and decide what to do next.
                 </p>
-                <a href="spotting-phishing.html" class="button">Start Learning →</a>
+                <div class="hero-actions">
+                    <a href="spotting-phishing.html" class="button">Start with the basics <span aria-hidden="true">→</span></a>
+                    <a href="#quick-checks" class="text-link">See three quick checks</a>
+                </div>
             </div>
+
+            <aside class="hero-note" aria-label="A helpful online safety reminder">
+                <span class="note-mark" aria-hidden="true">!</span>
+                <p class="note-eyebrow">A good rule of thumb</p>
+                <p class="note-quote">If a message makes you panic, pay, or act right now, take a breath and check it another way.</p>
+                <p class="note-small">Go to the company’s website yourself instead of using the message link.</p>
+            </aside>
         </section>
 
-        <section id="videos" class="section videos-section">
-            <p class="tag">VIDEOS</p>
-            <h2>Choose a lesson</h2>
+        <section id="quick-checks" class="section home-checks">
+            <div class="section-heading">
+                <p class="tag">WHEN SOMETHING FEELS OFF</p>
+                <h2>Take a moment. Check these three things.</h2>
+                <p class="description">You don’t have to be a tech expert. Start with what you can see.</p>
+            </div>
 
-            <div class="video-stack">
+            <ol class="checks-list">
+                <li>
+                    <span class="check-number">01</span>
+                    <div><h3>Who sent it?</h3><p>Look closely at the sender’s address, not just the name.</p></div>
+                </li>
+                <li>
+                    <span class="check-number">02</span>
+                    <div><h3>Are they rushing you?</h3><p>Unexpected pressure to pay, sign in, or share details is a reason to slow down.</p></div>
+                </li>
+                <li>
+                    <span class="check-number">03</span>
+                    <div><h3>Can you check another way?</h3><p>Contact the person or company using a number or website you already trust.</p></div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="videos" class="section home-lessons">
+            <div class="section-heading">
+                <p class="tag">SHORT, PRACTICAL LESSONS</p>
+                <h2>Pick up one useful habit.</h2>
+                <p class="description">Start wherever you like. Each lesson gives you a few things to look for and a clear next step.</p>
+            </div>
+
+            <div class="lesson-grid">
                 <a class="lesson-link" href="spotting-phishing.html">
-                    <div class="video-card full-width">
-                        <h3>Spotting Phishing</h3>
-                        <p>Learn to recognize fake emails, urgent scam messages, and suspicious requests.</p>
-                    </div>
+                    <article class="lesson-card">
+                        <span class="lesson-number">01 / NOTICE</span>
+                        <h3>Spotting phishing</h3>
+                        <p>Get to know the telltale signs in emails, texts, and unexpected requests.</p>
+                        <span class="lesson-arrow" aria-hidden="true">↗</span>
+                    </article>
                 </a>
 
                 <a class="lesson-link" href="suspicious-links.html">
-                    <div class="video-card full-width">
-                        <h3>Suspicious Links</h3>
-                        <p>See how to spot fake URLs and avoid clicking dangerous links.</p>
-                    </div>
+                    <article class="lesson-card">
+                        <span class="lesson-number">02 / LOOK CLOSER</span>
+                        <h3>Suspicious links</h3>
+                        <p>Learn what to check in a web address before you open it.</p>
+                        <span class="lesson-arrow" aria-hidden="true">↗</span>
+                    </article>
                 </a>
 
                 <a class="lesson-link" href="what-to-do.html">
-                    <div class="video-card full-width">
-                        <h3>What to Do</h3>
-                        <p>Know the right actions to take when you see a risky message or scam attempt.</p>
-                    </div>
+                    <article class="lesson-card">
+                        <span class="lesson-number">03 / TAKE ACTION</span>
+                        <h3>What to do next</h3>
+                        <p>Simple steps to take if you’ve clicked, replied, or shared something.</p>
+                        <span class="lesson-arrow" aria-hidden="true">↗</span>
+                    </article>
                 </a>
             </div>
         </section>
@@ -63,7 +105,7 @@
     </main>
 
     <footer>
-        <p>🛡️ CyberSafe — Think Before You Click.</p>
+        <p>CyberSafe <span aria-hidden="true">·</span> A little more confidence, one click at a time.</p>
     </footer>
 
 </body>
