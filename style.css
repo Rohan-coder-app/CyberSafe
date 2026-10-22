@@ -17,10 +17,11 @@ body {
 }
 
 nav {
-    height: 70px;
+    min-height: 70px;
     background: #0b1728;
     border-bottom: 1px solid #1d3048;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 8%;
@@ -48,6 +49,52 @@ nav {
 
 .nav-links a:hover {
     color: #5ee7d3;
+}
+
+.nav-links a[aria-current="page"] {
+    color: #496b55;
+    font-weight: bold;
+}
+
+.site-progress {
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: minmax(190px, 0.7fr) minmax(160px, 1.3fr);
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0 12px;
+    border-top: 1px solid #e4ded1;
+}
+
+.site-progress-copy {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--home-muted, #647168);
+    font-size: 12px;
+}
+
+.site-progress-title {
+    color: var(--home-ink, #27352f);
+    font-weight: bold;
+}
+
+.site-progress-track,
+.quiz-progress-track {
+    height: 9px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #e4ded1;
+}
+
+.site-progress-fill,
+.quiz-progress-fill {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--home-green, #496b55);
+    transition: width 0.35s ease;
 }
 
 .hero {
@@ -320,11 +367,109 @@ h2 {
     border-radius: 12px;
 }
 
-.quiz-card button {
+.quiz-section {
+    min-height: calc(100vh - 74px);
+}
+
+body:not(.home-page) .quiz-card {
+    padding: clamp(22px, 5vw, 36px);
+    background: #fffdf8;
+    border-color: #e5ded2;
+    border-radius: 4px;
+    box-shadow: 0 10px 24px rgba(39, 53, 47, 0.08);
+}
+
+.quiz-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    color: var(--home-green, #496b55);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.quiz-card .quiz-progress-track {
+    margin-bottom: 26px;
+}
+
+.quiz-card h2 {
+    margin-bottom: 20px;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.35;
+}
+
+.quiz-answers {
+    display: grid;
+    gap: 10px;
+}
+
+.quiz-card button.quiz-answer {
     display: block;
     width: 100%;
     text-align: left;
-    margin-top: 12px;
+    padding: 14px 16px;
+    border: 1px solid #e5ded2;
+    background: #f6f2e9;
+    color: var(--home-ink, #27352f);
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.quiz-card button.quiz-answer:hover:not(:disabled) {
+    border-color: var(--home-green, #496b55);
+    background: #e9eee6;
+}
+
+.quiz-card button.quiz-answer:disabled {
+    cursor: default;
+}
+
+.quiz-card button.quiz-answer.is-correct {
+    border-color: #496b55;
+    background: #e9eee6;
+}
+
+.quiz-card button.quiz-answer.is-incorrect {
+    border-color: #b85c3d;
+    background: #f7e9e1;
+}
+
+#quiz-feedback {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.quiz-feedback-correct,
+.quiz-result {
+    background: #e9eee6;
+    color: #27352f;
+}
+
+.quiz-feedback-incorrect {
+    background: #f7e9e1;
+    color: #673d30;
+}
+
+.quiz-card button.quiz-next {
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.quiz-card button[hidden],
+#quiz-feedback[hidden] {
+    display: none;
+}
+
+body:not(.home-page) .quiz-card button.quiz-next {
+    background: var(--home-rust);
+    color: #fffaf4;
 }
 
 footer {
@@ -715,6 +860,17 @@ footer {
         font-size: 12px;
     }
 
+    .site-progress {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 9px 0 2px;
+    }
+
+    .site-progress-copy {
+        flex-wrap: wrap;
+    }
+
     .home-page .hero {
         grid-template-columns: 1fr;
         gap: 42px;
@@ -864,5 +1020,16 @@ body:not(.home-page) a:focus-visible {
 
     body:not(.home-page) .nav-links a {
         font-size: 12px;
+    }
+
+    .site-progress {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 9px 0 2px;
+    }
+
+    .site-progress-copy {
+        flex-wrap: wrap;
     }
 }

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="quiz">
     <nav>
         <div class="logo">CyberSafe</div>
         <div class="nav-links">
@@ -17,12 +17,38 @@
             <a href="what-to-do.html">What to Do</a>
             <a href="test-your-knowledge.html">Test Your Knowledge</a>
         </div>
+        <div class="site-progress" aria-label="Website learning progress">
+            <div class="site-progress-copy">
+                <span class="site-progress-title">Your learning journey</span>
+                <span id="site-progress-label">Loading progress…</span>
+            </div>
+            <div class="site-progress-track" role="progressbar" aria-label="Website progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="site-progress-fill"></div>
+            </div>
+        </div>
     </nav>
 
     <main>
-        <section class="section">
+        <section class="section quiz-section">
+            <p class="tag">THE FINAL LEVEL</p>
             <h1>Test Your Knowledge</h1>
+            <p class="description">Take on 10 real-world phishing scenarios. Choose the safest response, collect points, and see how much you’ve learned.</p>
+
+            <div class="quiz-card" id="quiz-card" aria-live="polite">
+                <div class="quiz-topline">
+                    <span id="quiz-question-count">Question 1 of 10</span>
+                    <span id="quiz-score">⭐ 0 points</span>
+                </div>
+                <div class="quiz-progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+                    <div class="quiz-progress-fill"></div>
+                </div>
+                <h2 id="quiz-question"></h2>
+                <div class="quiz-answers" id="quiz-answers"></div>
+                <p id="quiz-feedback" hidden></p>
+                <button class="quiz-next button" id="quiz-next" type="button" hidden>Next question →</button>
+            </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

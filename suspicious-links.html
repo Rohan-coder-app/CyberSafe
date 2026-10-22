@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="links">
     <nav>
         <div class="logo">CyberSafe</div>
         <div class="nav-links">
@@ -16,6 +16,15 @@
             <a href="suspicious-links.html">Suspicious Links</a>
             <a href="what-to-do.html">What to Do</a>
             <a href="test-your-knowledge.html">Test Your Knowledge</a>
+        </div>
+        <div class="site-progress" aria-label="Website learning progress">
+            <div class="site-progress-copy">
+                <span class="site-progress-title">Your learning journey</span>
+                <span id="site-progress-label">Loading progress…</span>
+            </div>
+            <div class="site-progress-track" role="progressbar" aria-label="Website progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="site-progress-fill"></div>
+            </div>
         </div>
     </nav>
 
@@ -38,5 +47,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-page">
+<body class="home-page" data-page="home">
     <nav>
         <div class="logo">CyberSafe</div>
         <div class="nav-links">
@@ -17,16 +17,23 @@
             <a href="what-to-do.html">What to Do</a>
             <a href="test-your-knowledge.html">Test Your Knowledge</a>
         </div>
+        <div class="site-progress" aria-label="Website learning progress">
+            <div class="site-progress-copy">
+                <span class="site-progress-title">Your learning journey</span>
+                <span id="site-progress-label">Loading progress…</span>
+            </div>
+            <div class="site-progress-track" role="progressbar" aria-label="Website progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="site-progress-fill"></div>
+            </div>
+        </div>
     </nav>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-copy">
                 <p class="tag">A little more confidence online</p>
-                <h1>Not sure about that message? <span>Pause a second.</span></h1>
+                <h1>Not sure about that message? <span>Pause a second</span></h1>
                 <p class="hero-text">
-                    Scam messages are made to rush you. A few small checks can help
-                    you spot the warning signs and decide what to do next.
                 </p>
                 <div class="hero-actions">
                     <a href="spotting-phishing.html" class="button">Start with the basics <span aria-hidden="true">→</span></a>
@@ -107,6 +114,6 @@
     <footer>
         <p>CyberSafe <span aria-hidden="true">·</span> A little more confidence, one click at a time.</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
